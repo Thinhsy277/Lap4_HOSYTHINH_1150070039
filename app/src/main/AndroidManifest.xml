@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:label="1150070039-HOSYTHINH-LAP4TEOAPP"
+        android:icon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme._1150070039HOSYTHINHLAP4TEOAPP">
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HelloActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name=".MyReceiver"
+            android:exported="true">
+            <!-- nhận broadcast custom do app gửi -->
+            <intent-filter>
+                <action android:name="com.example.MY_CUSTOM_ACTION" />
+            </intent-filter>
+
+            <!-- ví dụ nhận AIRPLANE_MODE (vẫn cho phép) -->
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
